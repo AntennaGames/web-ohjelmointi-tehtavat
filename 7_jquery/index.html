@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Päävalikko</title>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <script>
+        $(document).ready(function () {
+            // Puhelinluettelon avaaminen appia painaessa
+            $('#showPhoneNumbers').click(function() {
+                window.location.href = 'puhelinluettelo.html';
+            });  
+            
+            // Puhelinnumeroiden hakuun siirtyminen nappia painaessa
+            $('#searchPhoneNumbers').click(function() {
+                window.location.href = 'haku.html';
+            });              
+        });
+      </script>    
+</head>
+<body>
+    <h1>Puhelinnumerot</h1>
+    <button id="showPhoneNumbers">Näytä puhelinluettelo</button>
+    <br>
+    <button id="searchPhoneNumbers">Hae puhelinnumero nimellä</button>
+</body>
+</html>

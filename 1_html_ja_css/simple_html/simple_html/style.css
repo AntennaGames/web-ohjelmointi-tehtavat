@@ -1,0 +1,91 @@
+body {
+  background: #8f7a6e;
+  color: #e0dbd8;
+  font-family: arial;
+  line-height: 1.4em;
+}
+
+a {
+  color: #e0dbd8;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.clr {
+  clear: both;
+}
+
+#container {
+  background: #292f36;
+  width: 960px;
+  margin: 30px auto;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#nav {
+  height: 40px;
+  background: #a41f13;
+}
+
+#nav ul {
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+#nav li {
+  list-style: none;
+  float: left;
+  padding-right: 20px;
+}
+
+#nav .active {
+  font-weight: bold;
+  color: #000;
+}
+
+#main {
+  float: left;
+  width: 40%;
+}
+
+#sidebar {
+  float: right;
+  width: 50%;
+  background: #a41f13;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#footer {
+  text-align: center;
+  padding: 10px;
+  background: #a41f13;
+  margin-top: 10px;
+}
+
+.opintojaksot li {
+  border-bottom: 2px;
+  padding-bottom: 20px;
+  margin-left: 30px;
+}
+
+.harrastukset li {
+  border-bottom: 2px;
+  padding-bottom: 5px;
+  margin-left: 25px;
+}
+.opintojaksot a {
+  background: #a41f13;
+  padding: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+}

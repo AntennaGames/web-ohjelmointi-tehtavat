@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Haku</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+      $(document).ready(function () {
+        $('[name="submit"]').click(function () {
+           // Tallennetaan hakusanakenttään annettu nimi muuttujaan
+           var searchTerm = $('#nimi').val();
+
+            // Haetaan data JSON tiedososta vertailua varten
+            $.getJSON("http://a41d.k.time4vps.cloud:3001/henkilot", function (data) {
+                // Käydään läpi kaikki JSON-tiedostossa olleet oliot
+                $.each(data, function(index, item) {
+                    // Verrataan löytyykö hakusananakenttään annettu nimi JSON-tiedostosta
+                    if (item.nimi == searchTerm) {
+                        // Asetetaan puhelinnumerokenttään nimeä vastaava puhelinnumero
+                        $('#puhelin').val(item.puhelin);
+                    }
+                });
+            });  
+            
+             
+        });
+
+        // Päävalikkoon palaaminen nappia painaessa
+        $('#return').click(function() {
+            window.location.href = 'index.html';
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Hae puhelinnumeroa nimellä</h1>
+
+    <button id="return">Palaa alkuun</button>
+
+    <form id="form" name="form">
+      <th>Syötä nimi:</th>
+      <td>
+        <input
+          name="nimi"
+          id="nimi"
+          type="text"
+          value=""
+          maxlength="35"
+          size="35"
+        />
+      </td>
+      <td>
+        <input
+          name="puhelin"
+          id="puhelin"
+          type="text"
+          value=""
+          maxlength="35"
+          size="35"
+        />
+      </td>
+
+      <td>
+        <input name="submit" type="button" value="Hae puhelinnumero" />
+      </td>
+    </form>
+  </body>
+</html>

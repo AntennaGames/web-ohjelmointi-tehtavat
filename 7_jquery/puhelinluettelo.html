@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puhelinluettelo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>     
+</head>
+<body>
+    <script> 
+        $(document).ready(function () { 
+            // Haetaan data JSON tiedososta
+            $.getJSON("http://a41d.k.time4vps.cloud:3001/henkilot", function (data) {
+                // Käydään läpi kaikki JSON-tiedostossa olleet oliot
+                $.each(data, function(index, item) {
+                    // Lisätään JSON-tiedostossa olleiden olioiden nimi ja puhelin tiedot paragrapheihin div-elementteihin
+                    $(".names").append("<p>"+item.nimi+"</p>");
+                    $(".numbers").append("<p>"+item.puhelin+"</p>"); 
+                });
+            }); 
+
+            // Päävalikkoon palaaminen nappia painaessa
+            $('#return').click(function() {
+                window.location.href = 'index.html';
+            });               
+        });
+    </script>
+
+    <h1>Puhelinluettelo</h1>
+
+    <button id="return">Palaa alkuun</button>
+    
+    <article class="header">
+        <p class="name">Nimi</p><p class="number">Puhelin</p>
+    </article>
+
+    <br>
+
+    <div class="names"></div>
+    <div class="numbers"></div>
+
+</body>
+</html>

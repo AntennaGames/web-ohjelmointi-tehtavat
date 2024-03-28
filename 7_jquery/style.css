@@ -1,0 +1,71 @@
+h1 {
+    text-align: center;
+    background-color: red;
+}
+
+.name {
+    text-align: center;
+    width: 55%;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .names {
+    text-align: center;
+    width: 55%;
+    float: left;
+    line-height: 0.5;
+  }  
+  
+  .number {
+    text-align: center;
+    width: 45%;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .numbers {
+    text-align: center;
+    width: 45%;
+    float: left;
+    line-height: 0.5;
+  }  
+  
+  .header p {
+    display: inline-block;
+    font-weight: bold;
+    background-color:black;
+    color: white;
+  }
+
+  .person table {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+
+  .names>p:nth-child(odd){
+    background-color:white;
+   }
+
+  .names>p:nth-child(even){
+    background-color:ghostwhite;
+   }
+
+ .numbers>p:nth-child(odd){
+    background-color:white;
+   }
+
+ .numbers>p:nth-child(even){
+    background-color:ghostwhite;
+   }
+
+  button {
+    margin-bottom: 10px;
+  }
